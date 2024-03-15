@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.mucahit.newpproject.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/hayvanKayitGecis"
+            app:destination="@id/hayvanKayitFragment" />
+        <action
+            android:id="@+id/hayvanDetayGecis"
+            app:destination="@id/hayvanDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hayvanKayitFragment"
+        android:name="com.mucahit.newpproject.ui.fragment.HayvanKayitFragment"
+        android:label="fragment_hayvan_kayit"
+        tools:layout="@layout/fragment_hayvan_kayit" />
+    <fragment
+        android:id="@+id/hayvanDetayFragment"
+        android:name="com.mucahit.newpproject.ui.fragment.HayvanDetayFragment"
+        android:label="fragment_hayvan_detay"
+        tools:layout="@layout/fragment_hayvan_detay" >
+        <argument
+            android:name="hayvan"
+            app:argType="com.mucahit.newpproject.data.entity.Hayvanlar" />
+    </fragment>
+</navigation>
